@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bleets Index</title>
-  </head>
-  <body>
-    Hey
-    <div data-ng-repeat="bleet in bleetsIndexViewModel.bleets">
-      <p>
-        {{bleets.content}}
-      </p>
-    </div>
-  </body>
-</html>
+<h2>Bleets Bleets Bleets Bleets Bleets</h2>
+
+<h1 ui-sref="bleetsNew"></h1>
+
+<div data-ng-repeat="bleet in bleetsIndexViewModel.bleets | orderBy:'-created_at'">
+  <p><a ui-sref="bleetsShow({id: bleet.id})">{{bleet.content}}</p></a>
+
+  <p>
+    <a ui-sref="bleetsEdit({id: bleet.id})">Edit Bleet</a>
+  </p>
+
+</div>

@@ -1,9 +1,11 @@
+"use strict";
+
 (function() {
   angular
     .module("bleets")
     .controller("bleetsIndexController", [
       "bleetsFactory",
-      bleetsIndexControllerFunction,
+      bleetsIndexControllerFunction
     ]);
 
     function bleetsIndexControllerFunction(bleetsFactory) {

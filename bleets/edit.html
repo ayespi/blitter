@@ -1,0 +1,11 @@
+<h2>Edit a Bleet</h2>
+
+<form>
+  <input value="{{bleetsEditViewModel.bleets.content}}" data-ng-model="bleetsEditViewModel.bleets.content" />
+
+  <!-- <input data-ng-model="bleetsNewViewModel.bleets.like" ng-click="likeBleet" placeholder="Like" value={}> -->
+
+  <button ng-click="bleetsEditViewModel.edit()">Update Bleet</button>
+
+  <button ng-click="bleetsEditViewModel.destroy()">Delete Bleet</button>
+</form>

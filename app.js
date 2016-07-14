@@ -2,13 +2,16 @@
 
 (function() {
   angular
-    .module("blitter", [
-      "ui-router",
+  .module("blitter", [
+      "ui.router",
       "bleets"
+    ])
+    .config([
+      "$stateProvider",
+      RouterFunction
     ]);
-    .config(["$stateProvider", Router]);
 
-    function Router() {
+    function RouterFunction($stateProvider) {
       $stateProvider
       .state("bleetsIndex", {
         url: "/bleets",
